@@ -1,6 +1,6 @@
 # StudyWise - Your Academic Assistant
 
-A revolutionary academic assistant for college students, powered by AI.
+An AI study assistant for college students: chat about your coursework and practise with flashcards.
 
 ## Features
 
