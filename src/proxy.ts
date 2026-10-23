@@ -11,7 +11,7 @@ import { NextResponse } from 'next/server';
 // A dedicated middleware like this for page route protection is more common with server-side sessions.
 
 // If you were to use server-side sessions with Firebase (e.g., using Firebase Admin SDK to mint session cookies):
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // List of public paths that don't require authentication
