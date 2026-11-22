@@ -24,7 +24,7 @@ An AI study assistant for college students: chat about your coursework and pract
 ## Prerequisites
 
 - Node.js 18+
-- npm or yarn
+- pnpm 11 (`corepack enable` or `npm i -g pnpm`)
 - Firebase project
 - Google AI API key
 
@@ -40,7 +40,7 @@ cd StudyWise
 ### 2. Install dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### 3. Environment Configuration
@@ -83,10 +83,10 @@ GOOGLE_GENAI_API_KEY=your_google_genai_api_key_here
 
 ```bash
 # Start the development server
-npm run dev
+pnpm dev
 
 # Start Genkit development server (in a separate terminal)
-npm run genkit:dev
+pnpm genkit:dev
 ```
 
 Open [http://localhost:9002](http://localhost:9002) to view the app.
@@ -96,13 +96,13 @@ Open [http://localhost:4000](http://localhost:4000) to view Genkit developer UI.
 
 ```bash
 # Type check
-npm run typecheck
+pnpm typecheck
 
 # Build the application
-npm run build
+pnpm build
 
 # Start production server
-npm start
+pnpm start
 ```
 
 ## Project Structure
@@ -132,13 +132,12 @@ src/
 
 ## Available Scripts
 
-- `npm run dev` - Start development server on port 9002
-- `npm run build` - Build for production
-- `npm start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run typecheck` - Run TypeScript type checking
-- `npm run genkit:dev` - Start Genkit development server
-- `npm run genkit:watch` - Start Genkit in watch mode
+- `pnpm dev` - Start development server on port 9002
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm typecheck` - Run TypeScript type checking
+- `pnpm genkit:dev` - Start Genkit development server
+- `pnpm genkit:watch` - Start Genkit in watch mode
 
 ## Known Issues & Fixes Applied
 
@@ -154,7 +153,7 @@ src/
 
 ### Remaining Security Vulnerabilities
 
-- Some moderate vulnerabilities in dependencies (Next.js, PrismJS) - can be fixed with `npm audit fix --force` but may cause breaking changes
+- Next.js is on 16.4.2 (patched). Run `pnpm audit` to see what remains; PrismJS comes in through `react-syntax-highlighter`.
 
 ## Contributing
 
